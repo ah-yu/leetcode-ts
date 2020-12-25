@@ -1,0 +1,11 @@
+export function twoSum(nums: number[], target: number): number[] {
+  for (let i = 0; i < nums.length; i++) {
+    for (let j = i; j < nums.length; j++) {
+      const sum = nums[i] + nums[j];
+      if (sum == target) {
+        return [i, j];
+      }
+    }
+  }
+  return [];
+}
