@@ -1,5 +1,5 @@
 export function isIsomorphic(s: string, t: string): boolean {
-  return (fn(s, t) ?? true) && (fn(t, s) ?? true);
+  return fn(s, t) && fn(t, s);
 }
 
 const fn = (s: string, t: string) => {
@@ -14,4 +14,5 @@ const fn = (s: string, t: string) => {
     }
     return false;
   }
+  return true;
 };
