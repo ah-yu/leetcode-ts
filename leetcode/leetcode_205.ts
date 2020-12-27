@@ -1,0 +1,17 @@
+export function isIsomorphic(s: string, t: string): boolean {
+  return (fn(s, t) ?? true) && (fn(t, s) ?? true);
+}
+
+const fn = (s: string, t: string) => {
+  const map = new Map();
+  for (let i = 0; i < s.length; i++) {
+    if (!map.has(s[i])) {
+      map.set(s[i], t[i]);
+      continue;
+    }
+    if (map.get(s[i]) == t[i]) {
+      continue;
+    }
+    return false;
+  }
+};
