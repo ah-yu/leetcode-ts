@@ -1,6 +1,6 @@
 export function longestPalindrome(s: string): string {
-  const dp: boolean[][] = new Array(s.length).fill([]).map(() =>
-    new Array(s.length).fill(false)
+  const dp: boolean[][] = new Array(s.length).fill(
+    new Array(s.length).fill(false),
   );
   let result = "";
   for (let l = 0; l < s.length; l++) {
